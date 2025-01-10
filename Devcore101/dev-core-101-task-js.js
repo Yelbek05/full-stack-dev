@@ -1,0 +1,11 @@
+// Сходить в магазин.
+console.log("walk up to the shoes")
+console.log("put on shoes")
+console.log("Go outside")
+console.log("Lock your doors")
+console.log("Take a walk up to X number of metres to get to the groceries")
+console.log("Take Y")
+console.log("Take Y to the cash desk")
+console.log("Put and let the cashier scan Y on cash desk")
+console.log("Pay for the Y the amount of Z")
+console.log("Go back X metres back to the Home where you've came from")
