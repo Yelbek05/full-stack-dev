@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first website</title>
+    </head>
+    <body>
+<!--The meain section of the webpage-->
+        <main>
+            <section>
+                <canvas id="myCanvas" width="700" height="400"></canvas>
+                <script>
+                    var canvas = document.getElementById('myCanvas');
+                    var context = canvas.getContext('2d');
+
+                    context.fillStyle = 'red';
+                    context.beginPath();
+                    context.arc(150, 150, 50, 0, Math.PI * 2);
+                    context.fill();
+                </script>
+            </section>
+        </main>
+
+
+    </body>
+</html>
