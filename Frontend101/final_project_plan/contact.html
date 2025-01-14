@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index_1.css">
+        <title>OnLeadify Digital Agency</title>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <a href="index_1.html">Дом</a>
+                <a href="about.html">О нас</a>
+                <a href="services.html">Услуги</a>
+                <a href="contact.html">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            <p>Получить предложение</p>
+            <p>Заполните форму для бесплатной консультации с нашими экспертами, и мы разработаем индивидуальный план, соответствующий конкретным целям вашего бизнеса.</p>
+
+            <form action="/submit" method="POST">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Ваше Имя">
+
+                <label for="phone">Мобильный:</label>
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Ваш номер телефона" required>
+
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" placeholder="Ваш электронный адрес" required>
+            
+                        <!-- Прошу -->
+                <label>Прошу*</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="service" value="digital-marketing"> Цифровой Маркетинг</label>
+                    <label><input type="checkbox" name="service" value="branding-design"> Брендинг/Дизайн</label>
+                    <label><input type="checkbox" name="service" value="packaging-design"> Дизайн упаковки</label>
+                    <label><input type="checkbox" name="service" value="website"> Веб-сайт</label>
+                    <label><input type="checkbox" name="service" value="photography-video"> Фотография/Видеосъемка</label>
+                </div>
+            
+                <!-- Бюджет -->
+                <label>Бюджет:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="budget" value="less-than-500"> менее 500$</label>
+                    <label><input type="radio" name="budget" value="500-1000"> 500$ - 1000$</label>
+                    <label><input type="radio" name="budget" value="1000-5000"> 1000$ - 5000$</label>
+                    <label><input type="radio" name="budget" value="5000-10000"> 5000$ - 10000$</label>
+                    <label><input type="radio" name="budget" value="not-set" checked> Пока не установлено</label>
+                </div>
+            
+                <!-- Submit -->
+                <button type="submit">Получить предложение</button>
+            </form>
+        </main>
+    </body>
+</html>
