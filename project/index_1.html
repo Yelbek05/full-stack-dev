@@ -3,61 +3,219 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="css/index_1.css">
         <title>OnLeadify Digital Agency</title>
     </head>
     <body>
         <header>
-            <nav class="nav">
-                <a class = "nav-icon" href="index_1.html">Дом</a>
-                <a class = "nav-icon" href="about.html">О нас</a>
-                <a class = "nav-icon" href="services.html">Услуги</a>
-                <a class = "nav-icon" href="contact.html">Контакты</a>
+            <nav class="nav-1 container"> 
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">    
+                    <i class="fas fa-bars"></i>
+                </label>    
+        
+                <span class="logo">OnLeadify</span>
+        
+                <div class="nav-links">
+                    <span class="closebtn">&times;</span> <!-- Close button -->
+                    <ul>
+                        <li><a class="nav-icon active" href="#about">О нас</a></li>
+                        <li><a class="nav-icon" href="#ForWho">Почему мы?</a></li>
+                        <li><a class="nav-icon" href="#Services">Наши услуги</a></li>
+                        <li><a class="nav-icon nav-button" href="#contacts">Забронировать звонок</a></li>
+                    </ul>
+                    <!-- for a mobile bar view -->
+                    <div class="contacts-mobile">  
+                        <a href="https://wa.me/+77073249107">
+                            <img src="pics/icons8-whatsapp-48.png" alt="WhatsApp contact icon" class="whatsapp_icon"> 
+                        </a>
+                        <p>+7 707 324 91 07</p>
+                    </div>
+                </div>
+                <div class="contacts-nav">
+                    <a href="https://wa.me/+77073249107">
+                        <img src="pics/icons8-whatsapp-48.png" alt="WhatsApp contact icon" class="whatsapp_icon"> 
+                    </a>
+                    <p>+7 707 324 91 07</p>
+                </div>
             </nav>
         </header>
+        
+        
 
-        <main>
-            <div>
-                <h1>Вдохновляем ваше видение нашим творчеством</h1>
-                <img src="pics/bulb_1.png">
-                <p>У каждого бренда есть уникальная история. Мы увлечены тем, чтобы помогать нашим клиентам рассказывать свою историю с помощью креативного дизайна и маркетинговых решений.</p>
-                <a href="about.html" class="cta">Узнать больше</a> <!--heading to the about_html-->
+        <main class="container" id="about-footer">
+            <div class="page_1">
+                <h1>Эффективные маркетинговые стратегии, <br class="number_1">ведущие к успеху.</h1>                  
+                <p>Мы помогаем компаниям расти с помощью креативной рекламы, основанной на данных, и передовых оптимизаций для масштабирования бренда в цифровой среде</p>
+                <form method="POST" action="https://script.google.com/macros/s/AKfycbwmzyix6-qhPY3xkiPieUr18i4hjyT6YFbGGPo5ionm/dev" class="form_1" id="form_1">
+                    <div class="input-container">
+                        <input name="Phone_number" id="input_1" class="input_1" placeholder="Ваш номер" aria-invalid="false" type="tel" pattern="\+?[0-9]{10,15}" required>
+                        <select name="Selection" id="input_3" class="select_1">
+                          <option value="" selected="selected">Я хочу</option>
+                          <option value="">Лиды</option>
+                          <option value="">Покупки</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="submit_button">ЗАБРОНИРОВАТЬ ЭКСПЕРТА</button>
+                </form>
             </div>
-            <h3>Кто мы?</h3>
-            <p>Добро пожаловать в OnLeadify, ведущее агентство цифрового маркетинга и брендинга, которое призвано способствовать вашему цифровому успеху. Благодаря нашему спектру экспертных услуг, включая цифровой маркетинг, дизайн и разработку веб-сайтов, брендинг, производство медиа и многое другое, у нас есть экспертиза и опыт, которые помогут вам достичь ваших бизнес-целей. В Onleadify мы верим в предоставление индивидуальных решений, которые отвечают вашим уникальным потребностям, и мы увлечены тем, чтобы помогать таким компаниям, как ваша, процветать в цифровую эпоху. Позвольте нам помочь вам вывести ваше цифровое присутствие на новый уровень.</p>
-            <a href="about.html" class="cta">Больше информации</a> <!--heading to the about_html-->
 
-            <h1>Цифровые решения, дающие результаты</h1>
-            <p>Откройте для себя наш опыт и истории успеха в области цифрового маркетинга, дизайна и разработки веб-сайтов, брендинга, медиапроизводства и многого другого.</p>
-            <img src="pics/result.png" alt="result_pic_1">
-            <img src="pics/result_2.png" alt="result_pic_2">
+            
+            <div class="forWho" id="ForWho">
+                <div class="for-who">
+                    <h2>Почему выбирают нас?</h2>
+                    <section class="card-solutions">
+
+                        <div class="card-who">
+                            <img src="/pics/check.png" alt="check point">
+                            <div class="content-who">
+                                <h3>Мы любим данные, но результаты — больше.</h3>
+                                <p>Мы ценим данные, но главное для нас — результат и превращение лида в клиента.</p>
+                            </div>
+                        </div>
+
+                        <div class="card-who">
+                            <img src="/pics/check.png" alt="check point">
+                            <div class="content-who">
+                                <h3>Разработка и внедрение эффективных маркетинговых стратегий</h3>
+                                <p>Направленных на достижение конкретных бизнес-целей.</p>
+                            </div>
+                        </div>
+
+                        <div class="card-who">
+                            <img src="/pics/check.png" alt="check point">
+                            <div class="content-who">
+                                <h3>Комплексный сервис</h3>
+                                <p>От разработки сайта до маркетинга в социальных сетях и лидогенерации — мы предлагаем полный спектр услуг для вашего бизнеса.</p>
+                            </div>
+                        </div>
+
+                        <div class="card-who">
+                            <img src="/pics/check.png" alt="check point">
+                            <div class="content-who">
+                                <h3>Никаких укрытий</h3>
+                                <p>Мы не скрываемся — всегда открыты, честны и прямолинейны, обсуждаем проблемы и находим решения.</p>
+                            </div>
+                        </div>
+
+                        <div class="card-who">
+                            <img src="/pics/check.png" alt="check point">
+                            <div class="content-who">
+                                <h3>Результаты, которые говорят сами за себя</h3>
+                                <p>Мы ориентированы на получение конкретных результатов: увеличение продаж, привлечение новых клиентов и рост бренда.</p>
+                            </div>
+                        </div>
+
+                        <div class="card-who">
+                            <img src="/pics/check.png" alt="check point">
+                            <div class="content-who">
+                                <h3>Инновационные подходы</h3>
+                                <p>Мы постоянно исследуем новые тренды и технологии, что позволяет нам предлагать современные и эффективные маркетинговые решения.</p>
+                            </div>
+                        </div>
+                    </section>  
+                </div>
+            </div>
+
+            <div class="Services" id="Services">
+                <h1>Наши услуги</h1>
+            </div>
+
+            <div class="cards-container">
+                <div class="card"> 
+                    <div class="content">
+                        <h2>Аналитика и стратегия</h2>
+                        <p>Мы проводим детальный анализ вашего бизнеса, целевой аудитории и конкурентов, чтобы выстроить эффективную маркетинговую стратегию.</p>
+                    </div>
+                    <img src="pics/business-analytics-process-finance-strategy-businessman-with-telescope-spyglass_88272-3793.jpg" alt="Analytics and Strategy" class="right"> 
+                </div>
+
+                <div class="card">
+                    <img src="pics/chto-takoe-soczialnye-media.jpg" alt="Search Marketing" class="left">
+                    <div class="content">
+                        <h2>Цифровой маркетинг</h2>
+                        <p>Есть много социальных платформ, и решение о том, где и как размещать рекламу, делает этот процесс еще более сложным. Компания OnLeadify делает это великолепно.</p>
+                    </div>
+                    
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <h2>Разработка и дизайн веб-сайтов</h2>
+                        <p>OnLeadify помогает создать сайт, который будет не только онлайн-присутствием, но и эффективным маркетинговым инструментом, оптимизированным для привлечения клиентов.</p>
+                    </div>
+                    <img src="pics/1693292261452.png" alt="Website and Design" class="right">
+                </div>    
+
+                <div class="card">
+                    <img src="pics/Main-steps-of-video-production-1.jpg" alt="Video and Camera Services" class="left">
+                    <div class="content">
+                        <h2>Фотография / Видеосъемка</h2>
+                        <p>OnLeadify предлагает профессиональные услуги по видеосъемке, помогая создать качественный контент для вашего бизнеса, бренда или мероприятий.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts" id="contacts">
+                <div class="getQ">
+                    <div class="content-1">
+                        <h1>Получить предложение</h1>
+                        <p>Оставьте заявку на бесплатную консультацию — подберем решение под ваш бизнес.</p>
+                    </div>
+                    <img src="https://assets.zyrosite.com/AQE35qE1jBFR0Reo/8997a25e14f08773debee681c2b85e0b-dOqMGe85PySyMp42.gif" alt="Quote gif">
+                </div>
+            </div>
+            
+            <div class="container-3" id="bookCall">
+                <form class="contact-for-submission">
+                    <div class="form-field">
+                        <label for="fname">Имя*</label>
+                        <input type="text" id="frame" name="fname" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-field">
+                        <label for="fname">Email*</label>
+                        <input type="email" id="email" name="femail" placeholder="Введите ваш email">
+                    </div>
+                    <div class="form-field">
+                    <label for="number" id="number" name="fnumber">Ваш номер*</label>
+                    <input type="number" id="number" name="fnumber" placeholder="Введите ваш номер телефона">
+                    </div>
+                    <div class="form-field">  
+                        <p class="asking">Запрос на*</p>
+                        <label class="select-input" for="aa"><input id="aa" type="checkbox">Цифровой маркетинг</label>
+                        <label class="select-input" for="bb"><input id="bb" type="checkbox">Разработка веб-сайта</label>
+                        <label class="select-input" for="cc"><input id="cc" type="checkbox">Фотография / Видеосъемка</label>
+                    </div>
+                    <!-- Бюджет -->
+                    <div class="form-field">
+                        <label>Бюджет*</label>
+                        <div class="radio-group">
+                            <label  class="select-number"><input type="radio" name="budget" value="less-than-500"> менее 500$</label>
+                            <label  class="select-number"><input type="radio" name="budget" value="500-1000"> 500$ - 1000$</label>
+                            <label  class="select-number"><input type="radio" name="budget" value="1000-5000"> 1000$ - 5000$</label>
+                            <label  class="select-number"><input type="radio" name="budget" value="5000-10000"> 5000$ - 10000$</label>
+                            <label  class="select-number"><input type="radio" name="budget" value="not-set" checked> Пока не установлено</label>
+                        </div>
+                    </div>
+                
+                    <!-- Submit -->
+                    <button type="submit">Получить предложение</button>
+                </form>
+            </div>
         </main>
 
         <footer>
-            <p>Подпишитесь на нашу рассылку</p>
-            <p>Адрес электронной почты</p>
-            <form action="/submit" method="POST">
-                <label for="email">Ваш электронной адрес</label>
-                <input type="email" id="email" name="subscribe">
-                <button type="submit">Оптравит</button>
-            </form>
-
             <div class="social-icons">
-                <a href="https://www.linkedin.com" target="_blank">
-                    <img src="pics/flowbite_linkedin-solid.png" alt="LinkedIn Icon">
-                </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <img src="pics/ic_outline-facebook.png" alt="Facebook Icon">
-                </a>
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="pics/mdi_instagram.png" alt="Instagram Icon">
-                </a>
-                <a href="https://www.twitter.com" target="_blank">
-                    <img src="pics/mdi_twitter.png" alt="Twitter Icon">
-                </a>
-
-                <p class="copyright">Все права защищены © 2024 Handmark Agency</p>
+                <div class="icons">
+                    <a class = "nav-icon" href="#about-footer" class="About-link">О нас</a>
+                    <a class = "nav-icon" href="#ForWho">Почему мы?</a>
+                    <a class = "nav-icon" href="#contacts">Наши услуги</a>
+                </div>
+                <p class="copyright">Все права защищены © 2024 OnLeadify Agency</p>
             </div>
         </footer>
+        <script src="js/index_1.js"></script>
     </body>
 </html>
