@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My js learning</title>
+        <link rel="stylesheet" href="index.css">
+        
+    </head>
+    <body>
+        <h1>My js learning</h1>
+        <button id="hello-button" onclick="alert('Hello world')">CLick me</button>
+        <section id="aboutMe">
+            <h2 id="aboutHeading">Обо мне</h2>
+            <p id="aboutText">Это описание пока временное.</p>
+            <button id="updateAbout">Обновить описание</button>
+        </section>
+
+        <form id="contactForm">
+            <label for="name">Name*</label>
+            <input type="text" name="name" id="name">
+
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email">
+            
+            <label for="message">Message*</label>
+            <textarea name="message" id="message" placeholder="I'm interested in..."></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <style>
+            input:invalid, textarea:invalid{
+                border: 2px solid red;
+            }
+
+            input:valid, textarea:valid{
+                border:2px solid green;
+            }
+        </style>
+
+        <script src="index-4.js"></script>
+    </body>
+</html>
