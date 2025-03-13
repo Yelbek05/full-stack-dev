@@ -1,0 +1,97 @@
+# Calorie Measuring AI App
+
+## Project Description
+
+This application leverages AI to help users track their caloric intake by identifying food items from images and providing nutritional information. It also allows users to manually log meals and activities to maintain a comprehensive view of their daily caloric balance.
+
+## Entities
+
+1.  **User**
+    *   Attributes: `user_id`, `username`, `email`, `password_hash`, `age`, `weight`, `height`, `activity_level`, `goal` (e.g., lose weight, maintain weight, gain weight)
+    *   Operations:
+        *   `POST /users/register`:  Register a new user (public).
+        *   `POST /users/login`:  Log in an existing user (public).
+        *   `GET /users/me`:  Retrieve profile information (authenticated user).
+        *   `PUT /users/me`:  Update profile information (authenticated user).
+        *   `DELETE /users/me`: Delete user account (authenticated user).
+        *   `POST /users/password/reset`: Request password reset (public).
+
+2.  **Food Item**
+    *   Attributes: `food_id`, `name`, `calories`, `protein`, `carbohydrates`, `fat`, `serving_size`, `serving_unit` (e.g., grams, ounces, piece)
+    *   Operations:
+        *   `GET /food/{food_id}`: Get details of a specific food item (all).
+        *   `GET /food/search?name={name}`: Search for food items by name (all).
+        *   `POST /food` - Add new food item (admin).
+        *   `PUT /food/{food_id}` - Update existing food item (admin).
+
+3.  **Meal Log**
+    *   Attributes: `log_id`, `user_id`, `timestamp`, `food_items` (list of `food_id` and quantity), `total_calories`
+    *   Operations:
+        *   `POST /meals`:  Log a new meal (authenticated user).
+        *   `GET /meals/{log_id}`:  Retrieve a specific meal log (owner or admin).
+        *   `GET /meals/daily`: Retrieve all the meals for that day (authenticated user).
+        *   `PUT /meals/{log_id}`:  Update a meal log (owner).
+        *   `DELETE /meals/{log_id}`: Delete a meal log (owner).
+
+4. **Activity Log**
+    *   Attributes: `activity_id`, `user_id`, `timestamp`, `activity_name`, `duration`, `calories_burned`
+    *   Operations:
+        *   `POST /activities`: Log a new activity (authenticated user).
+        *   `GET /activities/{activity_id}`: Retrieve a specific activity log (owner or admin).
+        *   `GET /activities/daily`: Retrieve all the activities for that day (authenticated user).
+        *   `PUT /activities/{activity_id}`: Update an activity log (owner).
+        *   `DELETE /activities/{activity_id}`: Delete an activity log (owner).
+
+## User Roles and Permissions
+
+| Role        | Description                                                    | Permissions                                                                                                                                                             |
+|-------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Guest       | Unauthenticated user.                                         | Access to public endpoints (e.g., registration, login, some food search).                                                                                             |
+| User        | Registered, authenticated user.                               | Create, read, update, and delete their own data (meals, activities, profile).  View food data.                                                                         |
+| Administrator | User with full control over the system.                        | All permissions, including managing users, food data, and potentially reviewing/moderating AI predictions.                                                                 |
+
+## API Endpoints (Examples)
+
+*   `/users/register`
+*   `/users/login`
+*   `/users/me`
+*   `/food/{food_id}`
+*   `/food/search?name={name}`
+*   `/meals`
+*   `/meals/{log_id}`
+*   `/activities`
+*   `/activities/{activity_id}`
+
+## Getting Started
+
+1.  Clone the repository: `git clone [your_repo_url]`
+2.  Create and activate a virtual environment: `python -m venv venv && source venv/bin/activate` (Linux/macOS) or `python -m venv venv && venv\Scripts\activate` (Windows)
+3.  Install dependencies: `pip install -r requirements.txt`
+4.  Run the application: `uvicorn main:app --reload`
+5.  Access the API at `http://localhost:8000`
+
+## Contributing
+
+[Describe how others can contribute to your project.]
+
+## License
+
+[Specify the license under which your project is released.]
+
+
+Here's a basic structure for your FastAPI application:
+calorie_app/
+├── main.py          # Main application entry point
+├── models.py        # Data models (Pydantic)
+├── routes/
+│   ├── users.py     # User-related routes
+│   ├── food.py      # Food-related routes
+│   ├── meals.py     # Meal log routes
+│   └── activities.py #Activity Log Routes
+├── services/
+│   ├── auth.py      # Authentication logic
+│   ├── database.py  # Database connection and operations
+│   └── ai_integration.py #AI Integration
+├── utils.py         # Utility functions
+├── requirements.txt # Dependencies
+└── README.md        # Project documentation
