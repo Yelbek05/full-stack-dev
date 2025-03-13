@@ -49,6 +49,7 @@ def login_user(username_or_email: str, password: str):
         raise HTTPException(status_code=400, detail="Неправильный пароль")
     
     return {"message": f"Қош келдіңіз, {user['name']}"}
+
     
     
     
